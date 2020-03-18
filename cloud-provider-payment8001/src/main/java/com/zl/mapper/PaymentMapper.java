@@ -1,0 +1,4 @@
+package com.zl.mapper;
+
+public interface PaymentMapper {
+}

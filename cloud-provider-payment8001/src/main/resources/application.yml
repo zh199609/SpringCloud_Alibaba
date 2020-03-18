@@ -1,0 +1,13 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: cloud-payment-service
+  datasource:
+    data-username: root
+    data-password: Zh199609!
+    url: jdbc:mysql://39.141.106.9:3306/cloud?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.zl.entity
