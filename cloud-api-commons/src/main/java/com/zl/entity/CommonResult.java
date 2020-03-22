@@ -1,8 +1,9 @@
-package com.zl;
+package com.zl.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 /**
  * @ClassName: CommonResult
@@ -14,14 +15,23 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class CommonResult<T> {
     private Integer code;
 
     private String message;
 
-    private T t;
+    private T data;
 
     public CommonResult(Integer code, String message) {
         this(code, message, null);
+    }
+
+    public static CommonResult success(Object t) {
+        return new CommonResult(200, "success", t);
+    }
+
+    public static CommonResult error() {
+        return new CommonResult(404, "error", null);
     }
 }
