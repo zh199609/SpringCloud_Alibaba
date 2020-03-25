@@ -1,0 +1,24 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: cloud-payment-hystrix-service
+  datasource:
+    url: jdbc:mysql://39.106.141.9:3306/cloud?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: Zh199609!
+eureka:
+  client:
+    register-with-eureka: true #false表示自己不向注册中心注册
+    fetch-registry: true #表示自己端就是注册中心，我的职责就是维护服务实例，并不要去检索服务
+    service-url:
+      #设置于EurekaServer交互的地址查询服务和注册服务都需要依赖这个
+#      defaultZone: http://127.0.0.1:7001/eureka,http://127.0.0.1:7002/eureka
+      defaultZone: http://127.0.0.1:7001/eureka
+  instance:
+    instance-id: payment8001
+    prefer-ip-address: true #访问路劲显示IP地址
+    #Eureka客户端Client向服务端发送心跳的时间间隔，默认30S
+    lease-renewal-interval-in-seconds: 2
+    #Eureka服务端在收到最后一次心跳后等待时间上限，超时清楚服务
+    lease-expiration-duration-in-seconds: 6
