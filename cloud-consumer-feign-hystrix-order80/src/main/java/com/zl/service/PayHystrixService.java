@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Version: 1.0
  **/
 @Component
-@FeignClient(value = "cloud-payment-hystrix-service")
+@FeignClient(value = "cloud-payment-hystrix-service", fallback = PayHystrixServiceFallBack.class)
 public interface PayHystrixService {
     @RequestMapping("/payment/hystrix/ok/{id}")
     String paymentInfo_ok(@PathVariable("id") Integer id);
