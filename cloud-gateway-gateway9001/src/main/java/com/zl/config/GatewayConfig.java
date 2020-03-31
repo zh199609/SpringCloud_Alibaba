@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @Date: 2020/3/29 22:22
  * @Version: 1.0
  **/
-@Configuration
+//@Configuration
 public class GatewayConfig {
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder routeLocatorBuilder) {
