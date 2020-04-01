@@ -19,6 +19,8 @@
         <module>cloud-provider-hystrix-payment8001</module>
         <module>cloud-consumer-feign-hystrix-order80</module>
         <module>cloud-gateway-gateway9001</module>
+        <module>cloud-config-center-7788</module>
+        <module>cloud-config-client3355</module>
     </modules>
     <packaging>pom</packaging>
 
