@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -66,5 +67,10 @@ public class PaymentController {
             e.printStackTrace();
         }
         return "paymentFeignTimeout";
+    }
+
+    @RequestMapping(value = "/zipkin")
+    public String paymentzipkin(){
+        return "hi,i`am zipkin";
     }
 }

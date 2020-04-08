@@ -1,0 +1,18 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: nacos-provider
+  datasource:
+    url: jdbc:mysql://39.106.141.9:3306/cloud?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: Zh199609!
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
