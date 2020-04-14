@@ -25,6 +25,7 @@
         <module>cloud-alibaba-provider-9020</module>
         <module>cloud-alibaba-consumer-80</module>
         <module>cloud-alibaba-config-nacos3355</module>
+        <module>cloud-alibaba-service-3366</module>
     </modules>
     <packaging>pom</packaging>
 
